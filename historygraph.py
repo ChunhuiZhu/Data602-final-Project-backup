@@ -85,7 +85,7 @@ def EWMA(histdata, ndays):
 #The Rate of Change (ROC) is a technical indicator that measures the percentage change between 
 #the most recent price and the price “n” day’s ago. The indicator fluctuates around the zero line.
 #ROC = [(histdata['Close']- histdata['Close'].shift(-7)) / histdata['Close'].shift(-7)]
-#exmpale use 7 days period Rate of change for NIFTY
+#exmpale use 7 days period Rate of change 
 def ROC(histdata,n):
      N = histdata['Close'].diff(n)
      D = histdata['Close'].shift(n)
@@ -162,10 +162,6 @@ def his100chart(company,numdays):
     plt.grid(True)    
         
     plt.show()
-
-
-
-decision=str(input("Please enter company (bitcoin):  ")) 
  
 his100chart("bitcoin",100) 
 
